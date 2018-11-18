@@ -4,6 +4,9 @@ import Router from 'vue-router'
 // Containers
 const DefaultContainer = () => import('@/containers/DefaultContainer')
 
+//Template
+const Template = () => import('@/components/Template')
+
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 
@@ -75,6 +78,11 @@ export default new Router({
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'template',
+          name: 'Template',
+          component: Template
         },
         {
           path: 'theme',
