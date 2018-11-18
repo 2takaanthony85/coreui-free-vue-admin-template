@@ -25,7 +25,8 @@ export default {
                 return this.val
             },
             set: function (newValue) {
-                console.log(newValue)
+                //console.log(newValue)
+                this.$emit('updateVal', newValue, this.index)
             }
         }
     }

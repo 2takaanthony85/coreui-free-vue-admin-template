@@ -5,7 +5,7 @@
                 <p>Hello World</p>
                 <b-button class="up-button" @click="addText">＋</b-button>
                 <div v-for="(val, index) in values" :key="index">
-                    <text-input :value="val" :num="index"></text-input>
+                    <text-input :value="val" :num="index" @updateVal="updateValues"></text-input>
                 </div>
             </b-card>
         </b-col>
@@ -28,6 +28,10 @@ export default {
     methods: {
         addText: function () {
             this.values.push('')
+        },
+        updateValues: function (newVal, num) {
+            this.values[num] = newVal
+            console.log(this.values)
         }
     }
 }
